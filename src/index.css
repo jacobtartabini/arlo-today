@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-arlo-blue: #2563eb;
+  --color-arlo-blue-hover: #1d4ed8;
+  --color-arlo-border: #e5e7eb;
+  --color-arlo-muted: #6b7280;
+  --color-arlo-faint: #9ca3af;
+  --color-arlo-surface: #f9fafb;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+}
+
+@keyframes task-checkbox-pop {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes task-checkmark-draw {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes task-row-complete {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0.72;
+    transform: translateX(2px);
+  }
+}
+
+@keyframes task-title-strike {
+  0% {
+    text-decoration-color: transparent;
+    color: #111827;
+  }
+  100% {
+    text-decoration-color: currentColor;
+    color: #9ca3af;
+  }
+}
+
+.task-checkbox-pop {
+  animation: task-checkbox-pop 0.38s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+.task-checkmark-visible {
+  opacity: 1;
+}
+
+.task-checkmark-draw {
+  animation: task-checkmark-draw 0.28s ease-out 0.08s both;
+}
+
+.task-row-completing {
+  animation: task-row-complete 0.42s ease-out forwards;
+}
+
+.task-title-done {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.task-row-completing .task-title-done {
+  animation: task-title-strike 0.34s ease-out forwards;
+}
+
+.task-checkmark-path-static {
+  stroke-dasharray: 14;
+  stroke-dashoffset: 0;
+}
+
+.task-checkmark-path-animated {
+  stroke-dasharray: 14;
+  stroke-dashoffset: 14;
+  animation: task-checkmark-stroke 0.3s ease-out 0.1s forwards;
+}
+
+@keyframes task-checkmark-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

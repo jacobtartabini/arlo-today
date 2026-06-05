@@ -1,0 +1,4 @@
+[[permission]]
+identifier = "allow-start-auth-server"
+description = "Enables the start_auth_server command."
+commands.allow = ["start_auth_server"]

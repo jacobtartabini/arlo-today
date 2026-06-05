@@ -1,0 +1,14 @@
+[[permission]]
+identifier = "allow-save-auth-token"
+description = "Enables the save_auth_token command."
+commands.allow = ["save_auth_token"]
+
+[[permission]]
+identifier = "allow-load-auth-token"
+description = "Enables the load_auth_token command."
+commands.allow = ["load_auth_token"]
+
+[[permission]]
+identifier = "allow-clear-auth-token"
+description = "Enables the clear_auth_token command."
+commands.allow = ["clear_auth_token"]

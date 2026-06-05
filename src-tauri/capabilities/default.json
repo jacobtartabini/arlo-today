@@ -1,0 +1,23 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main popover window",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-hide",
+    "core:window:allow-show",
+    "core:window:allow-set-focus",
+    "core:window:allow-set-position",
+    "core:window:allow-is-visible",
+    "core:window:allow-start-dragging",
+    "opener:default",
+    "deep-link:default",
+    "allow-save-auth-token",
+    "allow-load-auth-token",
+    "allow-clear-auth-token",
+    "allow-start-auth-server",
+    "allow-data-api-proxy"
+  ]
+}
+

@@ -1,0 +1,4 @@
+[[permission]]
+identifier = "allow-data-api-proxy"
+description = "Enables the data_api_proxy command."
+commands.allow = ["data_api_proxy"]
